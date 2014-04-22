@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div>
+    <p>
+        Enter a word between 2 and 15 letters and the server will solve an uncrash problem!</p>
+<form method="post" action="/solve">
+    <p>
+        <input type="text" name="starter">
+        <input type="submit" value="submit">
+    </p>
+</div>
+<div>
+    <ul>
+    {% for line in uncrash %}
+        <li>{{ line }}</li>
+    {% endfor %}
+
+</ul>
+{% endblock %}
