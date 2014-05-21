@@ -69,13 +69,4 @@ def play():
                 turn = 'me'
 
 if __name__ == "__main__":
-    solver(starter='Corpse')
-    solver(starter='Wealth')
-    solver(starter='Carrot')
-    solver(starter='Engine')
-    solver(starter='Algorithmic')
-    solver(starter='Cephalic')
-    solver(starter='Orthogonal')
-    solver(starter='cat')
-    solver(starter='big')
-    solver(starter='hep')
+    play()
