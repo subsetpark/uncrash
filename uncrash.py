@@ -41,6 +41,10 @@ def play():
                 next_word = random.choice(candidate_words)
         print(next_word)
         return next_word
+    def lose(phrase, thesaurus, words):
+        print(phrase)
+        print("\n".join(uncrash(thesaurus, words)[len(words):]))
+        exit()
 
     first_move = random.choice(('me', 'you'))
     if first_move == 'me':
@@ -61,9 +65,9 @@ def play():
         else:
             next_word = input("Enter your next word: ").upper()
             if is_taken(next_word, taken_letters(words)):
-                exit("That word is invalid! You lose.")
+                lose("That word is invalid! You lose.", thesaurus, words)
             elif next_word not in thesaurus:
-                exit("That's not a real word! You lose.")
+                lose("That's not a real word! You lose.", thesaurus, words)
             else:
                 words.append(next_word)
                 turn = 'me'
